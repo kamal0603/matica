@@ -1,0 +1,19 @@
+[{
+    "id":1,
+    "first_name": "Guest",
+    "last_name": "Guest",
+    "username": "guest",
+    "password": "Guest@123",
+    "email": "guest@yopmail.com"
+
+},
+{
+    "id":2,
+    "first_name": "Admin",
+    "last_name": "Admin",
+    "username": "admin",
+    "password": "Admin@123",
+    "email": "admin@yopmail.com"
+
+}
+]

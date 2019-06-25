@@ -1,0 +1,36 @@
+<div class="container h-100" ng-if="loginSuccess != 'yes'">
+    <div class="d-flex justify-content-center h-100">
+        <div class="user_card">
+            <h3>Please enter username and password</h3>
+            <div class="d-flex justify-content-center form_container">
+                <form ng-submit="login()">
+                    <div class="input-group mb-3">
+                        <div class="input-group-append">
+                            <span class="input-group-text">Username </span>
+                        </div>
+                        <input type="text" name="username_login" ng-model="user.username_login" class="form-control input_user" value="" placeholder="username">
+                    </div>
+                    <div class="input-group mb-2">
+                        <div class="input-group-append">
+                            <span class="input-group-text">Password</i></span>
+                        </div>
+                        <input type="password" name="password_login" ng-model="user.password_login" class="form-control input_pass" value="" placeholder="password">
+                    </div>
+                    <span ng-if="allUsers.length == 0">
+                            <p class="error-message">Username or Password is incorrect</p>
+                        </span>
+                    <div style="margin-top:15px;" class="d-flex justify-content-center mt-3 login_container">
+                        <input type="submit" value="Login" class="btn btn-info btn-block">
+                    </div>
+                    
+                    
+                </form>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+<!-- <div ng-if="loginSuccess == 'yes'">
+    <h3>Welcome to our site! Select an option from left to get started</h3>
+</div> -->

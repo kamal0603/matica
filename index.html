@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Matica | Online Mathematics</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/font-awesome.min.css">
+ 
+  <script src="index.js"></script>
+
+  <!-- Controllers -->
+
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<!--Start of Navigation Bar-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Matica</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#!signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+        <li ng-if="loginSuccess == 'yes'"><a href="#!profile"><span class="glyphicon glyphicon-log-in"></span> {{allUsers[0].first_name}}</a></li>        
+        <li ng-if="loginSuccess != 'yes'"><a href="#!login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+
+<div class="left-panel">
+  <div class="col-md-12">
+    <div class="col-md-3 left-menu">
+      <div>
+        <div class="menu"><a href="#!service">Our Services</a></div>
+        <div class="menu1"><a href="#!pricing">View Pricing</a></div>
+        <div class="menu" ng-if="loginSuccess == 'yes'"><a href="#!get-job-done">Get Your Job Done</a></div>
+        <div class="menu1"><a href="#!contact">Contact Us</a></div>
+        
+      </div>
+    </div>
+    <div class="col-md-7 left-menu-body">
+      <div ng-if="loginSuccess == 'yes'">
+        <h3>Welcome to our site! Select an option from left to get started</h3>
+      </div>
+      <div ng-view></div>
+    </div>
+    <div class="col-md-2 right-menu">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
