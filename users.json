@@ -15,5 +15,12 @@
     "password": "Admin@123",
     "email": "admin@yopmail.com"
 
-}
+},
+ 
+ {
+    "id": 3,
+     "first_name": "Folk",
+     "username": "what",
+     "password": "What"
+ }
 ]
